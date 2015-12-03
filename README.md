@@ -19,4 +19,6 @@ Requirements:
       * If the Notification Packages subkey exists, add the name of your PasswordFilterRegExp.dll to the existing value data. Do not overwrite the existing values, and do not include the .dll extension.
       * If the Notification Packages subkey does not exist, add it, and then specify the name of the DLL for the value data. Do not include the .dll extension.
       * The Notification Packages subkey can add multiple packages.
+  3. Add registry key for regular expression. (/Regestry/PasswordFilterKenSoft.reg)
+  
   
