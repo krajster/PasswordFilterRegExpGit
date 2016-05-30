@@ -100,6 +100,7 @@ NTSTATUS __stdcall PasswordChangeNotify(
 	PUNICODE_STRING NewPassword
 	)
 {
+	SecureZeroMemory(NewPassword->Buffer, NewPassword->Length);
 	return 0;
 }
 
@@ -141,7 +142,6 @@ BOOLEAN __stdcall PasswordFilter(
 	// for security reasons
 	wstrPassword.replace(0, wstrPassword.length(), wstrPassword.length(), (wchar_t)'?');
 	wstrPassword.erase();
-	//SecureZeroMemory(Password->Buffer, Password->Length);
-
+	
 	return bMatch;
 }
