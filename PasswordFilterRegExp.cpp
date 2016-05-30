@@ -141,7 +141,7 @@ BOOLEAN __stdcall PasswordFilter(
 	// for security reasons
 	wstrPassword.replace(0, wstrPassword.length(), wstrPassword.length(), (wchar_t)'?');
 	wstrPassword.erase();
-	SecureZeroMemory(Password->Buffer, Password->Length);
-		
+	//SecureZeroMemory(Password->Buffer, Password->Length);
+
 	return bMatch;
 }
